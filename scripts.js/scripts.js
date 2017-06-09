@@ -19,4 +19,14 @@ for (var index = 1; index <= userinput; index++){
   }
   //user-interface
   $(document).ready(function() {
-    $("")
+    $("form#Ping-Pong").submit(function(event) {
+      event.preventDefault();
+      $("ul#result").empty();
+      var user input = parseInt($("input#user").val());
+      var result = pingPong(userInput);
+      result.forEach(function(number) {
+        $("ul#result").append('<li>' + number + '</li>');
+      });
+      });
+
+    });

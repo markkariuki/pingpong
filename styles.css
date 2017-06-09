@@ -11,3 +11,14 @@ h1 {
   background-color: #ABC;
   padding-bottom: 200%;
 }
+
+.col-md-9 {
+  background-color: green;
+  padding-bottom: 100%;
+  text-align: center;
+}
+
+.btn {
+  color: aqua;
+  background-color: black;
+}
