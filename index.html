@@ -1,61 +1,78 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="/css/bootstrap.css">
-    <link rel="stylesheet" href="/css/m.css">
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <title>PING-PONG</title>
-  </head>
-  <body>
+  <!--links to my stylesheets. Bootstrap and css -->
+  <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+  <link rel="stylesheet" href="css/styles.css" type="text/css">
+  <<link href="https://fonts.googleapis.com/css?family=Bree+Serif|Bubbler+One|Mogra" rel="stylesheet">
 
-  </body><div class="header">
-    <h1>PING-PONG</h1>
+  <!--some scripting files just incase ;)-->
+  <script src="js/jquery-3.2.1.js"></script>
+  <script src="scripts/scripts.js"></script>
+
+  <title>Ping-Pong</title>
+
+</head>
+<body>
+  <!--having an intersting header-->
+  <div class="jumbotron text-center">
+    <h1>Let's Ping-Pong!!</h1>
+    <p>Type in a number and see some "magic"</p>
   </div>
-    <div class="row">
-      <div class="col-md-3">
+  <!--end of jumbotron-->
 
-        <h2><em>About PING PONG</em></h2>
-        <h4>Created By:</h4>
-        <p>DAVID MARK</p>
-        <h4>Github Username/url:</h4>
-        <a href="https://github.com/markkariuki/">markkariuki</a>
-        </p>
-        <h4>level to test for:</h4>
-        <p><strong>mpft the ping pong game</strong></p>
-
-    </div>
-    <div class="col-md-9">
-      <div class="content">
-        <h2>LETS PLAY</h2>
-        <h4><strong>Rules:</strong></h4>
-        <p>ping will count up to your number from one with the following expectation:</p>
-        <ol>
-          <li>Numbers divisible by 3 are replaced with<strong> "ping"></strong></li>
-            <li>Numbers divisble by 5 are replaced with<strong>"pong"</strong></li>
-            <li>Numbers divisible by 15 are replaced with <strong>"pingpong"<strong></li>
-
-        </ol>
-
-      </div>
-      <div class="container">
-        <div id="blanks">
-          <form id="Ping-Pong" class="form-online">
-            <div class="form-group">
-              <label for="ping-pong"><strong>Enter Your Number:</strong></label>
-              <input id="userInput" class="form-control" type="number">
-              <button type="submit" class="btn">Ping-Pong:</button>
-            </form>
-
+  <div class="container">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-3" id="about">
+          <h2>About Ping-Pong</h2>
+          <p>Type in some number and let's see some ping-pong magic in the air (technically the page)</p>
+          <br>
+          <br>
+          <h3>Brought to you by:</h3>
+          <p><a href="https://github.com/markkariuki" title="WillisCode">David mark</a></p>
         </div>
 
+<!-- the section with the rules -->
+        <div class="col-md-8" id="right-col">
+          <h2>Time to Start</h2>
+          <div id="show-text">
+            <p>Ping pong will count up to your number with the following exceptions:</p>
+            <ol>
+              <li>Numbers divisible by 3 become "ping"</li>
+              <li>Numbers divisible by 5 become "pong"</li>
+              <li>Numbers divisible by 15 become "pingpong"</li>
+            </ol>
+          </div>
+
+<!-- this is the form that allows user input -->
+          <form id="pong-number">
+            <div class="form-group">
+              <label for="pingpong">Enter your number: </label>
+              <input type="text" id="ping-pong">
+            </div>
+
+            <button type="submit" class="btn btn-default" onclick="test($('#ping-pong').val())">Find out!</button>
+          </form>
+        </div>
+
+        <div class="col-md-3" id="results">
+          <p><strong>Here's your result: </strong></p>
+          <span id="ping-pong-list"></span>
+          <ul >
+
+          </ul>
+
+        </div>
       </div>
-
+    <!--end of div.row-->
     </div>
-<ul id="result">
-  
-
-    </nav>
-    </div>
-
+<!--end of container-fluid-->
+  </div>
+<!--end of the container and page-->
+</body>
 </html>

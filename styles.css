@@ -1,24 +1,31 @@
-h1 {
-  background-image: repeating-radial-gradient();
-  text-align: center;
-  height: 100px;
-  padding-top: 20px;
-  text-decoration-style: double;
+*{
+    list-style-type: none;
+}
+body{
+    margin: 0;
+    background: transparent;
+    background-color: rgba(166, 218, 247 , 0.6);
+    font-family: roboto, Helvetica, sans-serif;
+}
+.pad{
+    height: auto;
+    width: 80%;
+    margin-right: 10%;
+    margin-left: 10%;
+    padding: 15px;
+    text-align: center;
+    margin-top: 100px;
+    border-radius: 5px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
-
-.col-md-3 {
-  background-color: #ABC;
-  padding-bottom: 200%;
+/*colors*/
+.green{
+    background: #4CAF50;
 }
-
-.col-md-9 {
-  background-color: green;
-  padding-bottom: 100%;
-  text-align: center;
+.salmon{
+   background: rgba( 255, 87, 51 , 0.5);
 }
-
-.btn {
-  color: aqua;
-  background-color: black;
+.lime{
+   background:  rgba(166, 177, 247 ,0.8 );
 }
