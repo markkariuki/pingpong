@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!--links to my stylesheets. Bootstrap and css -->
+  <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+  <link rel="stylesheet" href="css/styles.css" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Bubbler+One|Mogra" rel="stylesheet">
+
+  <!--some scripting files just incase ;)-->
+  <script src="js/jquery-3.2.1.js"></script>
+  <script src="js/scripts.js"></script>
+
+  <title>Ping-Pong</title>
+
+</head>
+<body>
+  <!--header-->
+  <div class="jumbotron text-center">
+    <h1>Let's Ping-Pong!!</h1>
+    <p>Type in a number and see some "magic"</p>
+  </div>
+  <!--end of jumbotron-->
+
+  <div class="container">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-3" id="about">
+          <h2>About Ping-Pong</h2>
+          <p>Type in some number and let's see some ping-pong in the air (technically the page)</p>
+          <br>
+          <br>
+          <h3>Brought to you by:</h3>
+          <p><a href="https://github.com/markkariuki" title="WillisCode">David mark</a></p>
+        </div>
+
+<!--  rules -->
+        <div class="col-md-8" id="right-col">
+          <h2>Time to Start</h2>
+          <div id="show-text">
+            <p>Ping pong will count up to your number with the following exceptions:</p>
+            <ol>
+              <li>Numbers divisible by 3 become "ping"</li>
+              <li>Numbers divisible by 5 become "pong"</li>
+              <li>Numbers divisible by 15 become "pingpong"</li>
+            </ol>
+          </div>
+
+<!--  user input -->
+          <form id="pong-number">
+            <div class="form-group">
+              <label for="pingpong">Enter your number: </label>
+              <input type="text" id="ping-pong">
+            </div>
+
+            <button type="submit" class="btn btn-default" onclick="test($('#ping-pong').val())">Find out!</button>
+          </form>
+        </div>
+
+        <div class="col-md-3" id="results">
+          <p><strong>Here's your result: </strong></p>
+          <span id="ping-pong-list"></span>
+          <ul >
+
+          </ul>
+
+        </div>
+      </div>
+    <!--end  div.row-->
+    </div>
+<!--end of container-fluid-->
+  </div>
+<!--end of the container and page-->
+</body>
+</html>
